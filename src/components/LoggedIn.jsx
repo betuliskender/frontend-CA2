@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import facade from "../utils/loginFacade";
 
 export default function LoggedIn({ setLoggedIn, loginCredentials }) {
+  
   const logout = () => {
     facade.logout();
     setLoggedIn(false);

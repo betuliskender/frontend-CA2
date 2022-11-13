@@ -1,4 +1,4 @@
-const URL = "http://localhost:8080/devops_starter_war_exploded";
+const URL = "https://betulis.dk/CA2";
  
 function handleHttpErrors(res) {
  if (!res.ok) {
@@ -28,7 +28,7 @@ return fetch(URL + "/api/login", options)
   .then(handleHttpErrors)
   .then(res => {setToken(res.token) })  }
 const fetchData = () => {const options = makeOptions("GET",true); //True add's the token
-return fetch(URL + "/api/info/user", options).then(handleHttpErrors); }
+return fetch(URL + "/api/user", options).then(handleHttpErrors); }
 const makeOptions= (method,addToken,body) =>{
    var opts = {
      method: method,
@@ -52,7 +52,7 @@ const makeOptions= (method,addToken,body) =>{
      loggedIn,
      login,
      logout,
-     fetchData
+     fetchData,
  }
 }
 const facade = loginFacade();

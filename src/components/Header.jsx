@@ -1,8 +1,8 @@
 import {useState} from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/Header.css";
-import Login from "./Login";
-import LoggedIn from "./LoggedIn";
+import Login from "./Login.jsx";
+import LoggedIn from "./LoggedIn.jsx";
 
 function Header({loggedIn,setLoggedIn}) {
   const init = {username: "", password: ""};
@@ -13,10 +13,7 @@ function Header({loggedIn,setLoggedIn}) {
       <nav className="topnav">
         <div className="nav-menu">
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/test">Test</NavLink>
-          <NavLink to="/test2">Test2</NavLink>
-          <NavLink to="/test3">Test3</NavLink>
-          <NavLink to="/test4">Test4</NavLink>
+          <NavLink to="/meal">Meal</NavLink>
           <div className="login-container">
           {!loggedIn ? (<Login setLoggedIn={setLoggedIn} loginCredentials={loginCredentials} setLoginCredentials={setLoginCredentials}  />) :
                 (<div>
